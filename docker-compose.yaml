@@ -3,6 +3,6 @@ services:
  tomcat_service:
    image: 'tomcat:9'
    ports:
-    -'8081:8080'
+    - '8081:8080'
    volumes:
-    -'/mnt/sample/game-of-life/gameoflife-web/target/gameoflife.war:/usr/local/tomcat/webapps/'
+    - '/mnt/sample/game-of-life/gameoflife-web/target:/usr/local/tomcat/webapps/'
