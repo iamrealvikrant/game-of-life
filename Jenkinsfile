@@ -23,12 +23,12 @@ pipeline {
 		}
 		}
     //comment below stage after first build//
-    /*stage ('installing docker-compose') { 
+    stage ('installing docker-compose') { 
 		steps {
 			 sh 'curl -SL https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose ; sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose'
 			 sh 'chmod -R 777 /usr/bin/docker-compose ; chmod -R 777 /usr/local/bin/docker-compose'
 		}
-		}*/
+		}
 		stage ('depoly to tomcat container') {
 		steps {
 			sh 'cd /mnt/sample/game-of-life/ ; sudo docker-compose up tomcat_service -d'
